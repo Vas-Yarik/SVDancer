@@ -5,11 +5,13 @@ import org.w3c.dom.Node;
 import java.util.ArrayList;
 
 public class cpu implements svdCpu{
-    public cpu(){fieldsList = new ArrayList<field>();}
+    public cpu(){fieldsList = new ArrayList<ConcretePeripheralField>();}
 
     @Override
     public void add_field(Node svdField) {
-        fieldsList.add(new field(svdField));
+        fieldsList.add(new ConcretePeripheralField(svdField));
+        System.out.println(fieldsList.getLast().get_name());
+        System.out.println(fieldsList.getLast().get_address());
     }
-    private ArrayList<field> fieldsList;
+    private ArrayList<ConcretePeripheralField> fieldsList;
 }

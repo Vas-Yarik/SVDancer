@@ -28,9 +28,9 @@ public class SVD {
     {
         NodeList nodeList = doc.getElementsByTagName("peripheral");
         for (int nodeIndex = 0; nodeIndex < nodeList.getLength(); nodeIndex++) {
+//        for (int nodeIndex = 0; nodeIndex < 1; nodeIndex++) {
             Node item = nodeList.item(nodeIndex);
             if (item.getNodeType() == Node.ELEMENT_NODE) {
-//                System.out.println(("Finded node: " + nodeIndex + " value: " + item.getTextContent()));
                 cpuImpl.add_field(item);
             }
         }
