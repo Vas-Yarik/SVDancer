@@ -1,63 +1,101 @@
 ---
 cpu: "stm32h743"
 memory map:
-
   - External device:
-    - regions:
-      - FMC SDRAM Bank2:
-        - "0xD0000000"
-        - "0xDFFFFFFF"
-      - FMC SDRAM Bank1:
-        - "0xCC000000"
-        - "0xC3FFFFFF"
-      - Rserved:
-        - "0xA0000000"
-        - "0xBFFFFFFF"
+      - regions:
+          - FMC SDRAM Bank2:
+              - "0xD0000000"
+              - "0xDFFFFFFF"
+          - FMC SDRAM Bank1:
+              - "0xCC000000"
+              - "0xC3FFFFFF"
+          - Rserved:
+              - "0xA0000000"
+              - "0xBFFFFFFF"
 
   - External memories:
-    - regions:
-      - QUADSPI:
-        - "0x90000000" 
-        - "0x9FFFFFFF"
-      - FMC NAND:
-        - "0x80000000" 
-        - "0x8FFFFFFF"
-      - Reserved:
-        - "0x70000000"
-        - "0x7FFFFFFF"
-      - FMC SRAM 4 Bank1:
-        - "0x6C000000" 
-        - "0x6FFFFFFF"
-      - FMC SRAM 3 Bank1:
-        - "0x68000000" 
-        - "0x6BFFFFFF"
-      - FMC SRAM 2 Bank1:
-        - "0x64000000"
-        - "0x67FFFFFF"
-      - FMC SRAM 1 Bank1:
-        - "0x60000000"
-        - "0x63FFFFFF"
+      - regions:
+          - QUADSPI:
+              - "0x90000000"
+              - "0x9FFFFFFF"
+          - FMC NAND:
+              - "0x80000000"
+              - "0x8FFFFFFF"
+          - Reserved:
+              - "0x70000000"
+              - "0x7FFFFFFF"
+          - FMC SRAM 4 Bank1:
+              - "0x6C000000"
+              - "0x6FFFFFFF"
+          - FMC SRAM 3 Bank1:
+              - "0x68000000"
+              - "0x6BFFFFFF"
+          - FMC SRAM 2 Bank1:
+              - "0x64000000"
+              - "0x67FFFFFF"
+          - FMC SRAM 1 Bank1:
+              - "0x60000000"
+              - "0x63FFFFFF"
 
   - Peripherals:
-    - regions:
-      - Backup SRAM:
-        - "0x38800000"
-        - "0x38800FFF"
-      - SRAM4:
-        - "0x38000000"
-        - "0x3800FFFF"
-      - SRAM3:
-        - "0x30040000"
-        - "0x30047FFF"
-      - SRAM2:
-        - "0x30020000"
-        - "0x3003FFFF"
-      - SRAM1:
-        - "0x30000000"
-        - "0x3001FFFF"
-      - AXI SRAM:
-        - "0x24000000"
-        - "0x2407FFFF"
-      - DTCM:
-        - "0x20000000"
-        - "0x2001FFFF"
+      - regions:
+          - Backup SRAM:
+              - "0x38800000"
+              - "0x38800FFF"
+          - SRAM4:
+              - "0x38000000"
+              - "0x3800FFFF"
+          - SRAM3:
+              - "0x30040000"
+              - "0x30047FFF"
+          - SRAM2:
+              - "0x30020000"
+              - "0x3003FFFF"
+          - SRAM1:
+              - "0x30000000"
+              - "0x3001FFFF"
+          - AXI SRAM:
+              - "0x24000000"
+              - "0x2407FFFF"
+          - DTCM:
+              - "0x20000000"
+              - "0x2001FFFF"
+          - System Memory:
+              - "0x1FF00000"
+              - "0x1FF1FFFF"
+          - OTP:
+              - "0x08FFF000"
+              - "0x08FFF3FF"
+          - Flash bank 2:
+              - "0x08100000"
+              - "0x081FFFFF"
+          - Flash bank 2:
+              - "0x08000000"
+              - "0x080FFFFF"
+          - ITCM RAM:
+              - "0x00000000"
+              - "0x0000FFFF"
+          - AHB4:
+              - "0x58020000"
+              - "0x58025BFF"
+          - APB4:
+              - "0x58000000"
+              - "0x580073FF"
+          - AHB3:
+              - "0x51000000"
+              - "0x5200EFFF"
+          - APB3:
+              - "0x50001000"
+              - "0x50003FFF"
+          - AHB2:
+              - "0x48020000"
+              - "0x48022FFF"
+          - AHB1:
+              - "0x58020000"
+              - "0x4007FFFF"
+          - APB2:
+              - "0x40010000"
+              - "0x40017FFF"
+          - APB1:
+              - "0x40000000"
+              - "0x4000D3FF"
